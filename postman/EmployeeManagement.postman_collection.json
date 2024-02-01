@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "d7ddd8cb-2913-401a-bce5-35371cc0ac2e",
+		"name": "EmployeeManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28641786"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Akshay2\",\r\n    \"email\":\"akshay1@gmail.com\",\r\n    \"department\":\"devolepment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/employee-management/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"employee-management",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "employeeByDepartment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/employees/department?department=devolepment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"employees",
+						"department"
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "devolepment"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
