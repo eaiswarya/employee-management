@@ -4,25 +4,25 @@
 ## Endpoints
 Here we are using the following endpoints.
 -  Add a employee-
-   
-    POST endpoint for adding new employees.
 
-    http://localhost:8082/employees/add
+	POST endpoint for adding new employees.
+
+	http://localhost:8082/employees/add
 - Find employee by id
 
-    GET endpoint used for getting employee details using their id.
+	GET endpoint used for getting employee details using their id.
 
-    http://localhost:8082/employees/{id}
+	http://localhost:8082/employees/{id}
 - get all employees
 
-    GET endpoint used for getting all employee details.
+	GET endpoint used for getting all employee details.
 
-    http://localhost:8082/employees
+	http://localhost:8082/employees
 - get employees by department
 
-    GET endpoint used for getting employees by their department.
+	GET endpoint used for getting employees by their department.
 
-    http://localhost:8082/employees/department?department={department}
+	http://localhost:8082/employees/department?department={department}
 # prerequisites
 Before you starting you have met these requirements.
 - JDK 17
@@ -39,6 +39,3 @@ https://github.com/eaiswarya/employee-management
 
 ## Testing
 postman is used to test the endpoints for employee management.
-
-
-

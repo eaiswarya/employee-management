@@ -16,9 +16,10 @@ public class ExampleApplication {
     @Bean
     public ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration().setFieldMatchingEnabled(true)
+        modelMapper
+                .getConfiguration()
+                .setFieldMatchingEnabled(true)
                 .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE);
         return modelMapper;
     }
-
 }
