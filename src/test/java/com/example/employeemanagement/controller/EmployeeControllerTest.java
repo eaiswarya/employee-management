@@ -1,4 +1,4 @@
-package com.employeemanagement.example.controller;
+package com.example.employeemanagement.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -8,11 +8,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.employeemanagement.example.contract.request.EmployeeRequest;
-import com.employeemanagement.example.contract.response.EmployeeResponse;
-import com.employeemanagement.example.service.EmployeeService;
+import com.example.employeemanagement.contract.request.EmployeeRequest;
+import com.example.employeemanagement.contract.response.EmployeeResponse;
+import com.example.employeemanagement.service.EmployeeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,18 @@ public class EmployeeControllerTest {
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().json(new ObjectMapper().writeValueAsString(expectedResponse)));
+    }
+
+    @Test
+    void testAllEmployees() throws Exception {
+        List<EmployeeResponse> responses = Arrays.asList(new EmployeeResponse());
+
+        when(employeeService.getAllEmployees()).thenReturn(responses);
+
+        mockMvc.perform(get("/employees").contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().json(new ObjectMapper().writeValueAsString(responses)));
     }
 
     @Test

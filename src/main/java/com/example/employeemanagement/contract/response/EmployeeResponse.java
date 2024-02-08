@@ -1,4 +1,4 @@
-package com.employeemanagement.example.contract.response;
+package com.example.employeemanagement.contract.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

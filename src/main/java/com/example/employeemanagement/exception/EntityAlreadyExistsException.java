@@ -1,4 +1,4 @@
-package com.employeemanagement.example.exception;
+package com.example.employeemanagement.exception;
 
 import lombok.Getter;
 
@@ -7,7 +7,7 @@ public class EntityAlreadyExistsException extends RuntimeException {
     private final String entity;
 
     public EntityAlreadyExistsException(String entity) {
-        super(entity + "already exists");
+        super(entity + " Already exists");
         this.entity = entity;
     }
 }

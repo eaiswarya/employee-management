@@ -1,10 +1,11 @@
-package com.employeemanagement.example.service;
+package com.example.employeemanagement.service;
 
-import com.employeemanagement.example.contract.request.EmployeeRequest;
-import com.employeemanagement.example.contract.response.EmployeeResponse;
-import com.employeemanagement.example.exception.EntityAlreadyExistsException;
-import com.employeemanagement.example.model.Employee;
-import com.employeemanagement.example.repository.EmployeeRepository;
+import com.example.employeemanagement.contract.request.EmployeeRequest;
+import com.example.employeemanagement.contract.response.EmployeeResponse;
+import com.example.employeemanagement.exception.EmployeeNotFoundException;
+import com.example.employeemanagement.exception.EntityAlreadyExistsException;
+import com.example.employeemanagement.model.Employee;
+import com.example.employeemanagement.repository.EmployeeRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -37,12 +38,15 @@ public class EmployeeService {
         Employee employee =
                 employeeRepository
                         .findById(id)
-                        .orElseThrow(() -> new RuntimeException("employee not found"));
+                        .orElseThrow(() -> new EmployeeNotFoundException("Employee not found"));
         return modelMapper.map(employee, EmployeeResponse.class);
     }
 
     public List<EmployeeResponse> getEmployeesByDepartment(String query) {
         List<Employee> employees = (List<Employee>) employeeRepository.findByDepartment(query);
+        if (employees.isEmpty()) {
+            throw new EmployeeNotFoundException("No employees found for department: " + query);
+        }
         return employees.stream()
                 .map(employee -> modelMapper.map(employee, EmployeeResponse.class))
                 .collect(Collectors.toList());

@@ -1,6 +1,6 @@
-package com.employeemanagement.example.repository;
+package com.example.employeemanagement.repository;
 
-import com.employeemanagement.example.model.Employee;
+import com.example.employeemanagement.model.Employee;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

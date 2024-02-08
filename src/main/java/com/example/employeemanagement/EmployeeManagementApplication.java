@@ -1,4 +1,4 @@
-package com.employeemanagement.example;
+package com.example.employeemanagement;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class ExampleApplication {
+public class EmployeeManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ExampleApplication.class, args);
+        SpringApplication.run(EmployeeManagementApplication.class, args);
     }
 
     @Bean

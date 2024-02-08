@@ -1,8 +1,8 @@
-package com.employeemanagement.example.controller;
+package com.example.employeemanagement.controller;
 
-import com.employeemanagement.example.contract.request.EmployeeRequest;
-import com.employeemanagement.example.contract.response.EmployeeResponse;
-import com.employeemanagement.example.service.EmployeeService;
+import com.example.employeemanagement.contract.request.EmployeeRequest;
+import com.example.employeemanagement.contract.response.EmployeeResponse;
+import com.example.employeemanagement.service.EmployeeService;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
