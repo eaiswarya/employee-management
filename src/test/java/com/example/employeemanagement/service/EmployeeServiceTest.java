@@ -1,4 +1,4 @@
-package com.employeemanagement.example.service;
+package com.example.employeemanagement.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -6,11 +6,11 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.employeemanagement.example.contract.request.EmployeeRequest;
-import com.employeemanagement.example.contract.response.EmployeeResponse;
-import com.employeemanagement.example.exception.EntityAlreadyExistsException;
-import com.employeemanagement.example.model.Employee;
-import com.employeemanagement.example.repository.EmployeeRepository;
+import com.example.employeemanagement.contract.request.EmployeeRequest;
+import com.example.employeemanagement.contract.response.EmployeeResponse;
+import com.example.employeemanagement.exception.EntityAlreadyExistsException;
+import com.example.employeemanagement.model.Employee;
+import com.example.employeemanagement.repository.EmployeeRepository;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;

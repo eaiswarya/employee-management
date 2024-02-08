@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Akshay\",\r\n    \"email\":\"akshay@gmail.com\",\r\n    \"department\":\"testing\"\r\n}",
+					"raw": "{\r\n    \"name\":\"Aiswarya\",\r\n    \"email\":\"aiswarya@gmail.com\",\r\n    \"department\":\"Dev\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -60,7 +60,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8082/employees/14",
+					"raw": "http://localhost:8082/employees/15",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -68,7 +68,7 @@
 					"port": "8082",
 					"path": [
 						"employees",
-						"14"
+						"15"
 					]
 				}
 			},
@@ -80,7 +80,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8082/employees/department?department=testing",
+					"raw": "http://localhost:8082/employees/department?department=maths",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -93,7 +93,7 @@
 					"query": [
 						{
 							"key": "department",
-							"value": "testing"
+							"value": "maths"
 						}
 					]
 				}
