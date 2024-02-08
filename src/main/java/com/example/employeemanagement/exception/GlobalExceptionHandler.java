@@ -19,7 +19,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public String handleRunTimeException(RuntimeException ex) {
 
-        return ex.getMessage();
+        return  ex.getMessage() + ",  Please try again";
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

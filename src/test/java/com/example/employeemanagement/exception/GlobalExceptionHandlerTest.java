@@ -19,7 +19,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 
 @ContextConfiguration(classes = {GlobalExceptionHandler.class})
 @ExtendWith(SpringExtension.class)
-public class GlobalExceptionTest {
+public class GlobalExceptionHandlerTest {
     @Autowired private GlobalExceptionHandler globalExceptionHandler;
 
     @Test
